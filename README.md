@@ -25,7 +25,6 @@ A complete RESTful e-commerce backend built with Go, Gin, MongoDB, and Razorpay 
 
 ```
 eccomerce-golang/
-├── cmd/server/          # Server entry points
 ├── internal/
 │   ├── config/          # Database configuration
 │   ├── handlers/        # HTTP request handlers
@@ -41,7 +40,6 @@ eccomerce-golang/
 │   └── validation/      # Input validation schemas
 ├── .env                 # Environment variables
 ├── main.go             # Application entry point
-└── seed_products.go    # Database seeding script
 ```
 
 ## Installation
@@ -79,11 +77,6 @@ RAZORPAY_WEBHOOK_SECRET=your_webhook_secret
 4. **Run the application**
 ```bash
 go run main.go
-```
-
-5. **Seed database (optional)**
-```bash
-go run seed_products.go
 ```
 
 ## API Endpoints
@@ -357,12 +350,6 @@ Products endpoint supports:
 Using Air for hot reload:
 ```bash
 air
-```
-
-### Seed Database
-Add 100,000 test products:
-```bash
-go run seed_products.go
 ```
 
 ## Testing with Razorpay

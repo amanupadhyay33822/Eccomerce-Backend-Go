@@ -12,6 +12,9 @@ bin/
 # Uploads
 uploads/
 
+.env
+.env.local
+
 # IDE
 .vscode/
 
