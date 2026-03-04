@@ -2,6 +2,7 @@ package main
 
 import (
 	"eccomerce-golang/internal/config"
+	"eccomerce-golang/internal/middleware"
 	"eccomerce-golang/internal/routes"
 	"eccomerce-golang/internal/utils"
 	"fmt"
@@ -16,6 +17,10 @@ func main() {
 	godotenv.Load()
 	r := gin.Default()
 	r.SetTrustedProxies(nil)
+
+	// Apply rate limiting
+	r.Use(middleware.RateLimiter())
+
 	config.ConnectDB()
 
 	api := r.Group("/api")
