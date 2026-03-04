@@ -11,6 +11,7 @@ A complete RESTful e-commerce backend built with Go, Gin, MongoDB, and Razorpay 
 - 💳 **Payment Integration** - Razorpay payment gateway with signature verification
 - ✅ **Input Validation** - Request validation middleware
 - 🔒 **Security** - Password hashing, JWT tokens, HMAC signature verification
+- ⚡ **Rate Limiting** - Token bucket algorithm (10 req/sec, 20 burst capacity)
 
 ## Tech Stack
 
@@ -266,6 +267,7 @@ Products endpoint supports:
 - ObjectID conversion in middleware (once)
 - HMAC signature verification for payments
 - Input validation on all endpoints
+- Rate limiting (10 requests/second per IP, 20 burst capacity)
 
 ## Database Models
 
